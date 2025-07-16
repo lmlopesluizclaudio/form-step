@@ -1,4 +1,7 @@
-import Box from "./componente-box/box";
+import Box from "./components/box";
+import Steps from "./components/steps";
+import Divider from "./components/divider";
+import Input from "./components/Input";
 
 function App() {
   
@@ -11,13 +14,24 @@ function App() {
       height: "100vh",
     }}>
       <Box>
-        <h1>teste  </h1>
-        {/*
-          aqui vai todo o formulario
-          e os step
+        <Steps steps= {[
+          {nome: 'Contato',ordem: 1},
+          {nome: 'Empresa',ordem: 2},
+          {nome: 'Projeto',ordem: 3},
 
-        */}
+        ]} />
+        <Divider/>
+        <form > 
+          <Input/>
+          <Input/>
+          <Input/>
+
+
+
+
+        </form>
       </Box>
+      
 
     </div>
   );
